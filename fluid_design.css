@@ -1,0 +1,41 @@
+
+    /* Ensure fluid grid adapts to screen size */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for the header */
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Fluid container that adjusts to screen width */
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Ensures boxes wrap on small screens */
+  justify-content: space-around;
+  padding: 10px;
+}
+
+/* Fluid boxes with percentage widths */
+.box {
+  background-color: #f4a261;
+  color: white;
+  text-align: center;
+  padding: 40px;
+  margin: 10px;
+  width: 45%; /* Percentage-based width for fluidity */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Media Query for small screens (below 600px) */
+@media (max-width: 600px) {
+  .box {
+    width: 100%; /* Make boxes stack vertically on small screens */
+  }
+}
